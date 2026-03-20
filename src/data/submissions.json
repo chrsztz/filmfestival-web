@@ -1,0 +1,80 @@
+[
+  {
+    "id": "al",
+    "name": "A-Level 学段",
+    "nameEn": "A-Level",
+    "minSubmissions": 2,
+    "maxDuration": "15分钟",
+    "requirements": [
+      "每班至少提交 2 部作品",
+      "单部时长不超过 15 分钟（含片头片尾）",
+      "鼓励多种类型：剧情片、纪录片、实验短片",
+      "需提交完整剧本及分镜脚本"
+    ]
+  },
+  {
+    "id": "ap",
+    "name": "AP 学段",
+    "nameEn": "AP",
+    "minSubmissions": 2,
+    "maxDuration": "15分钟",
+    "requirements": [
+      "每班至少提交 2 部作品",
+      "单部时长不超过 15 分钟（含片头片尾）",
+      "鼓励多种类型：剧情片、纪录片、实验短片",
+      "需提交完整剧本及分镜脚本"
+    ]
+  },
+  {
+    "id": "ib",
+    "name": "IB 学段",
+    "nameEn": "IB",
+    "minSubmissions": 2,
+    "maxDuration": "12分钟",
+    "requirements": [
+      "每班至少提交 2 部作品",
+      "单部时长不超过 12 分钟（含片头片尾）",
+      "题材不限，鼓励跨学科主题探索",
+      "需提交完整剧本及反思日志"
+    ]
+  },
+  {
+    "id": "gaokao",
+    "name": "普通高中学段",
+    "nameEn": "General High School",
+    "minSubmissions": 1,
+    "maxDuration": "10分钟",
+    "requirements": [
+      "每班至少提交 1 部作品",
+      "单部时长不超过 10 分钟（含片头片尾）",
+      "题材不限，鼓励关注校园生活与社会议题",
+      "需提交简要创作说明"
+    ]
+  },
+  {
+    "id": "junior",
+    "name": "初中学段",
+    "nameEn": "Junior High",
+    "minSubmissions": 1,
+    "maxDuration": "8分钟",
+    "requirements": [
+      "每班至少提交 1 部作品",
+      "单部时长不超过 8 分钟（含片头片尾）",
+      "鼓励短片、Vlog、微纪录片等形式",
+      "需提交简要创作说明"
+    ]
+  },
+  {
+    "id": "primary",
+    "name": "小学学段",
+    "nameEn": "Primary School",
+    "minSubmissions": 1,
+    "maxDuration": "5分钟",
+    "requirements": [
+      "每班至少提交 1 部作品",
+      "单部时长不超过 5 分钟（含片头片尾）",
+      "形式自由：动画、定格、真人短片均可",
+      "鼓励家长或老师协助指导"
+    ]
+  }
+]

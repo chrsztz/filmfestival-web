@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  /* Festival Deep Blues - from logo background */
+  --color-festival-deep: #0a1628;
+  --color-festival-dark: #0e2a3a;
+  --color-festival-navy: #132f42;
+  --color-festival-slate: #1a3a52;
+
+  /* Copper Orange - logo primary line color */
+  --color-copper-300: #e0a07a;
+  --color-copper-400: #d4845a;
+  --color-copper-500: #c67a4a;
+  --color-copper-600: #a8623a;
+  --color-copper-700: #8a4e2e;
+
+  /* Sage Green - logo secondary line color */
+  --color-sage-300: #adb88a;
+  --color-sage-400: #97a86a;
+  --color-sage-500: #8a9a5a;
+  --color-sage-600: #6d7a48;
+  --color-sage-700: #556038;
+
+  /* Warm Glow - logo center */
+  --color-glow: #e8a050;
+  --color-glow-light: #f0b870;
+
+  /* Text Colors */
+  --color-text-primary: #f0ece4;
+  --color-text-secondary: #8fa0b0;
+  --color-text-muted: #5a6a7a;
+
+  /* Fonts */
+  --font-serif: "Noto Serif SC", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-festival-deep);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-festival-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-copper-600);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-copper-500);
+}
+
+/* Selection color */
+::selection {
+  background-color: color-mix(in srgb, var(--color-copper-500) 30%, transparent);
+  color: var(--color-text-primary);
+}
+
+/* Wave animation keyframes */
+@keyframes wave-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}

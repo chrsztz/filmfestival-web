@@ -1,0 +1,56 @@
+[
+  {
+    "id": "guest-1",
+    "name": "陈思远",
+    "nameEn": "Chen Siyuan",
+    "title": "资深纪录片导演",
+    "organization": "湖南卫视",
+    "avatar": "",
+    "bio": "从业二十余年，曾执导多部获奖纪录片，作品多次入围国际电影节。长期关注青年影像创作者的成长与发展。"
+  },
+  {
+    "id": "guest-2",
+    "name": "林雨桐",
+    "nameEn": "Lin Yutong",
+    "title": "影视制片人",
+    "organization": "芒果TV",
+    "avatar": "",
+    "bio": "芒果TV青年制片人，主导多部热播网络电影及短剧项目。致力于发掘新生代创作力量，推动青年影视人才培养。"
+  },
+  {
+    "id": "guest-3",
+    "name": "王子墨",
+    "nameEn": "Wang Zimo",
+    "title": "电影学院教授",
+    "organization": "中南大学",
+    "avatar": "",
+    "bio": "中南大学文学与新闻传播学院教授，研究方向为影视美学与视听语言。著有《镜头的诗学》等多部学术著作。"
+  },
+  {
+    "id": "guest-4",
+    "name": "苏晚晴",
+    "nameEn": "Su Wanqing",
+    "title": "青年编剧",
+    "organization": "独立创作者",
+    "avatar": "",
+    "bio": "新锐编剧，作品曾获FIRST青年电影展最佳编剧提名。擅长以细腻笔触描绘当代青年生活，关注个体叙事与时代的交汇。"
+  },
+  {
+    "id": "guest-5",
+    "name": "赵鹤鸣",
+    "nameEn": "Zhao Heming",
+    "title": "摄影指导",
+    "organization": "长沙星辰影业",
+    "avatar": "",
+    "bio": "资深摄影指导，曾参与多部院线电影的拍摄工作。对光影语言有独到见解，倡导'用镜头说话'的创作理念。"
+  },
+  {
+    "id": "guest-6",
+    "name": "方逸尘",
+    "nameEn": "Fang Yichen",
+    "title": "声音设计师",
+    "organization": "北京听象工作室",
+    "avatar": "",
+    "bio": "专业声音设计师，作品涵盖电影、纪录片及新媒体艺术。曾获中国电影金鸡奖最佳录音提名，对声音叙事有深入研究。"
+  }
+]
