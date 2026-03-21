@@ -1,5 +1,5 @@
+﻿import { motion } from 'framer-motion'
 import { Link } from 'react-router'
-import { motion } from 'framer-motion'
 import { Sparkles, Users, Send, Newspaper } from 'lucide-react'
 import ParticleField from '../components/effects/ParticleField'
 import AnimatedLogo from '../components/effects/AnimatedLogo'
@@ -16,7 +16,7 @@ const quickNavItems = [
     icon: Sparkles,
     title: '主题释义',
     titleEn: 'Concept',
-    desc: '探索"众响"的深层含义',
+    desc: '探索“众响”的深层含义',
   },
   {
     path: '/guests',
@@ -89,7 +89,7 @@ export default function HomePage() {
               animate={{ opacity: 1 }}
               transition={{ delay: 3.6, duration: 0.8 }}
             >
-              众响 —— 寻找影像中的时代共振
+              众响：寻找影像中的时代共振
             </motion.p>
             <motion.p
               className="text-text-muted text-sm mt-2 tracking-widest"
@@ -108,15 +108,8 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 4.2, duration: 0.6 }}
           >
-            <CountdownTimer
-              targetDate={SUBMISSION_DEADLINE}
-              label="投稿截止倒计时"
-              urgent
-            />
-            <CountdownTimer
-              targetDate={CEREMONY_DATE}
-              label="颁奖典礼倒计时"
-            />
+            <CountdownTimer targetDate={SUBMISSION_DEADLINE} label="投稿截止倒计时" urgent />
+            <CountdownTimer targetDate={CEREMONY_DATE} label="颁奖典礼倒计时" />
           </motion.div>
         </div>
 
@@ -144,8 +137,8 @@ export default function HomePage() {
       {/* Wave Separator */}
       <WaveAnimation />
 
-      {/* Quick Navigation Cards */}
-      <section className="py-20 px-6">
+      {/* Explore Section */}
+      <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-12"
@@ -154,31 +147,21 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs tracking-[0.3em] uppercase text-text-muted">
-              EXPLORE
-            </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-text-primary mt-2">
-              探索影节
-            </h2>
+            <span className="text-xs tracking-[0.3em] uppercase text-text-muted">EXPLORE</span>
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-text-primary mt-2">探索影节</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
             {quickNavItems.map((item, index) => (
               <Link key={item.path} to={item.path}>
-                <Card delay={index * 0.1} className="h-full group cursor-pointer">
+                <Card delay={index * 0.1} className="h-full min-h-[260px] group cursor-pointer">
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-xl bg-copper-500/10 flex items-center justify-center mb-4 group-hover:bg-copper-500/20 transition-colors">
-                      <item.icon size={24} className="text-copper-400" />
+                    <div className="w-14 h-14 rounded-xl bg-copper-500/10 flex items-center justify-center mb-5 group-hover:bg-copper-500/20 transition-colors">
+                      <item.icon size={26} className="text-copper-400" />
                     </div>
-                    <h3 className="font-serif text-lg font-semibold text-text-primary mb-1">
-                      {item.title}
-                    </h3>
-                    <span className="text-xs text-text-muted tracking-wider mb-2">
-                      {item.titleEn}
-                    </span>
-                    <p className="text-sm text-text-secondary">
-                      {item.desc}
-                    </p>
+                    <h3 className="font-serif text-2xl leading-tight font-semibold text-text-primary mb-3">{item.title}</h3>
+                    <span className="text-sm text-text-muted tracking-wider mb-3">{item.titleEn}</span>
+                    <p className="text-base text-text-secondary">{item.desc}</p>
                   </div>
                 </Card>
               </Link>
@@ -187,7 +170,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Bottom wave */}
+      <div className="px-6">
+        <div className="max-w-7xl mx-auto h-px bg-gradient-to-r from-transparent via-copper-500/30 to-transparent" />
+      </div>
       <WaveAnimation />
     </div>
   )

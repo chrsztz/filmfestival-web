@@ -62,6 +62,20 @@ body {
   background: var(--color-copper-500);
 }
 
+.photo-carousel-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.photo-carousel-scroll::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--color-festival-navy) 80%, transparent);
+  border-radius: 999px;
+}
+
+.photo-carousel-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-copper-500);
+  border-radius: 999px;
+}
+
 /* Selection color */
 ::selection {
   background-color: color-mix(in srgb, var(--color-copper-500) 30%, transparent);
