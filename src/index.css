@@ -44,6 +44,11 @@ body {
   margin: 0;
 }
 
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;

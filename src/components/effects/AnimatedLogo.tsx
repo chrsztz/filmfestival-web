@@ -179,23 +179,24 @@ export default function AnimatedLogo({ className = '', size = 600 }: AnimatedLog
       >
         {/* Glow filter */}
         <defs>
-          <filter id="glow">
+          <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
             <feGaussianBlur stdDeviation="4" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
-          <filter id="numberGlow">
+          <filter id="numberGlow" x="-30%" y="-30%" width="160%" height="160%">
             <feGaussianBlur stdDeviation="2.8" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
-          <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#f2c28e" stopOpacity="0.42" />
-            <stop offset="48%" stopColor="#cf916f" stopOpacity="0.2" />
+          <radialGradient id="centerGlow" cx="50%" cy="50%" r="58%">
+            <stop offset="0%" stopColor="#ffe0b4" stopOpacity="0.86" />
+            <stop offset="42%" stopColor="#ebb78d" stopOpacity="0.5" />
+            <stop offset="70%" stopColor="#cf916f" stopOpacity="0.22" />
             <stop offset="100%" stopColor="#cf916f" stopOpacity="0" />
           </radialGradient>
           <linearGradient id="heartCoreToneA" x1="250" y1="200" x2="550" y2="200" gradientUnits="userSpaceOnUse">
@@ -278,10 +279,10 @@ export default function AnimatedLogo({ className = '', size = 600 }: AnimatedLog
         <motion.circle
           cx="400"
           cy="200"
-          r="48"
+          r="68"
           fill="url(#centerGlow)"
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 1, scale: 1.08 }}
           transition={{ duration: 1.5, delay: 1.5, ease: 'easeOut' }}
         />
 

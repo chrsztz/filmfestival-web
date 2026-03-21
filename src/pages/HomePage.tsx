@@ -45,7 +45,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section - Full Screen */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-x-hidden overflow-y-visible">
         {/* Background layers */}
         <div className="absolute inset-0 bg-gradient-to-b from-festival-deep via-festival-dark to-festival-deep" />
         <ParticleField />
@@ -68,7 +68,7 @@ export default function HomePage() {
             transition={{ delay: 2.5, duration: 1 }}
           >
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-              {'合心众响'.split('').map((char, i) => (
+              {'共振'.split('').map((char, i) => (
                 <motion.span
                   key={i}
                   className="inline-block bg-gradient-to-r from-copper-400 via-glow to-copper-400 bg-clip-text text-transparent"
