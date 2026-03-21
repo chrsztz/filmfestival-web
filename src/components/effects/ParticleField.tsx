@@ -94,8 +94,7 @@ export default function ParticleField() {
       const mouseGravityBase = mouse.pressed ? 300 : 180
       const blackHoleGravityBase = 540
       const softening = 24
-      const maxBlackHoles = 4
-      const minHoleGap = 180
+      const minHoleGap = 130
 
       // Cursor influence follows the real pointer with easing instead of jumping.
       mouse.x += (mouse.targetX - mouse.x) * 0.14
@@ -118,8 +117,8 @@ export default function ParticleField() {
 
       const avgClusterSpeed = clusteredCount > 0 ? clusteredSpeedTotal / clusteredCount : Infinity
       const isStableCluster =
-        clusteredCount >= (mouse.pressed ? 25 : 30) &&
-        avgClusterSpeed < 0.22
+        clusteredCount >= (mouse.pressed ? 15 : 20) &&
+        avgClusterSpeed < (mouse.pressed ? 0.34 : 0.28)
       if (isStableCluster) {
         clusterStableFramesRef.current += 1
       } else {
@@ -143,9 +142,6 @@ export default function ParticleField() {
             y: mouse.y,
             phase: 0,
           })
-          if (blackHoles.length > maxBlackHoles) {
-            blackHoles.shift()
-          }
           spawnCooldownRef.current = 80
         }
         clusterStableFramesRef.current = 0

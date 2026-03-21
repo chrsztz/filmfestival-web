@@ -171,11 +171,19 @@ export default function AnimatedLogo({ className = '', size = 600 }: AnimatedLog
   }
 
   return (
-    <div className={`relative ${className}`} style={{ maxWidth: size }}>
+    <div
+      className={`relative ${className}`}
+      style={{ maxWidth: size, userSelect: 'none', WebkitUserSelect: 'none' }}
+      draggable={false}
+      onDragStart={(e) => e.preventDefault()}
+      onMouseDown={(e) => e.preventDefault()}
+    >
       <svg
         viewBox={viewBox}
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
+        draggable={false}
+        style={{ userSelect: 'none', WebkitUserSelect: 'none', pointerEvents: 'none' }}
       >
         {/* Glow filter */}
         <defs>
@@ -186,18 +194,11 @@ export default function AnimatedLogo({ className = '', size = 600 }: AnimatedLog
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
-          <filter id="numberGlow" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="2.8" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
           <radialGradient id="centerGlow" cx="50%" cy="50%" r="58%">
-            <stop offset="0%" stopColor="#ffe0b4" stopOpacity="0.86" />
-            <stop offset="42%" stopColor="#ebb78d" stopOpacity="0.5" />
-            <stop offset="70%" stopColor="#cf916f" stopOpacity="0.22" />
-            <stop offset="100%" stopColor="#cf916f" stopOpacity="0" />
+            <stop offset="0%" stopColor="#ffc890" stopOpacity="0.66" />
+            <stop offset="46%" stopColor="#e8956a" stopOpacity="0.34" />
+            <stop offset="78%" stopColor="#9f544a" stopOpacity="0.14" />
+            <stop offset="100%" stopColor="#9f544a" stopOpacity="0" />
           </radialGradient>
           <linearGradient id="heartCoreToneA" x1="250" y1="200" x2="550" y2="200" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stopColor="#c97864" />
@@ -279,21 +280,30 @@ export default function AnimatedLogo({ className = '', size = 600 }: AnimatedLog
         <motion.circle
           cx="400"
           cy="200"
-          r="68"
+          r="66"
           fill="url(#centerGlow)"
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1.03 }}
           transition={{ duration: 1.5, delay: 1.5, ease: 'easeOut' }}
         />
+        <motion.circle
+          cx="400"
+          cy="200"
+          r="32"
+          fill="#ffd6a4"
+          opacity="0.16"
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 0.16, scale: 1.02 }}
+          transition={{ duration: 1.2, delay: 1.65, ease: 'easeOut' }}
+        />
 
-        {/* Center "12" as vector strokes (not selectable text) */}
+        {/* Center "12" */}
         <motion.g
           fill="none"
-          stroke="#5d3f33"
-          strokeWidth="8.2"
+          stroke="#4a3229"
+          strokeWidth="15"
           strokeLinecap="round"
           strokeLinejoin="round"
-          filter="url(#numberGlow)"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 2, ease: 'easeOut' }}
