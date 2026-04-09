@@ -1,37 +1,47 @@
 [
   {
     "id": "news-1",
-    "title": "第十二届校园电影节正式启动",
+    "title": "第十二届校园电影节正式启幕",
+    "titleEn": "The 12th Campus Film Festival Officially Opens",
     "date": "2026-02-20",
-    "summary": "以「合心众响」为主题的第十二届校园电影节正式拉开帷幕。本届影节旨在汇聚校园创作者的影像力量，寻找时代共振。",
+    "summary": "以“合心众响”为主题的第十二届校园电影节正式拉开帷幕。本届影节聚焦校园创作者的影像表达，寻找属于这一代人的时代共振。",
+    "summaryEn": "The 12th Campus Film Festival has officially opened under the theme Resonance. This year’s edition spotlights student filmmakers and the distinct image-making voices of a new generation.",
     "tag": "announcement"
   },
   {
     "id": "news-2",
     "title": "评审团阵容公布",
+    "titleEn": "Jury Lineup Announced",
     "date": "2026-03-01",
-    "summary": "本届影节特邀来自湖南卫视、芒果TV、高校及独立创作领域的六位资深嘉宾组成评审团，为参赛作品提供专业评审与指导。",
+    "summary": "本届影节邀请来自导演、编剧、制片、媒体策划与后期创作领域的嘉宾组成评审团，为参赛作品提供专业评审与指导。",
+    "summaryEn": "This year’s jury brings together guests from directing, screenwriting, producing, media strategy and post-production to provide professional feedback and evaluation for submitted works.",
     "tag": "announcement"
   },
   {
     "id": "news-3",
     "title": "投稿通道正式开放",
+    "titleEn": "Submission Channel Opens",
     "date": "2026-03-05",
-    "summary": "各学段投稿通道已开放，截止日期为 3 月 25 日 23:59。请各班级按要求完成作品提交，注意技术规格与字幕要求。",
+    "summary": "各学段投稿通道现已开放，投稿截止时间为 2026 年 3 月 25 日 23:59。请按要求提交作品，并留意技术规格与字幕要求。",
+    "summaryEn": "Submissions are now open across all divisions. The final deadline is March 25, 2026 at 23:59. Please review the technical specifications and subtitle requirements before uploading your work.",
     "tag": "announcement"
   },
   {
     "id": "news-4",
     "title": "幕后手记：如何拍好一部校园短片",
+    "titleEn": "Behind the Scenes: How to Make a Strong Campus Short",
     "date": "2026-03-10",
-    "summary": "从选题构思到后期剪辑，影节组委会整理了一份实用创作指南，帮助同学们在有限时间内完成高质量的影像作品。",
+    "summary": "从选题构思到后期剪辑，组委会整理了一份实用创作指南，帮助同学们在有限时间内完成更成熟的影像表达。",
+    "summaryEn": "From concept development to final edit, the committee has prepared a practical guide to help students build stronger, more focused films within a limited production window.",
     "tag": "behind-scenes"
   },
   {
     "id": "news-5",
-    "title": "影节周边设计揭秘",
+    "title": "影节视觉周边设计揭晓",
+    "titleEn": "Festival Visual Identity Revealed",
     "date": "2026-03-15",
-    "summary": "本届影节主视觉由心形声波构成，象征'合心'与'众响'的交融。周边产品包括限定海报、徽章及主题T恤，敬请期待。",
+    "summary": "本届影节主视觉由心形与声波交织构成，象征“合心”与“众响”的交融。相关海报与纪念物料将陆续发布。",
+    "summaryEn": "The festival’s visual identity combines heart motifs and sound waves to echo the idea of collective resonance. Posters and commemorative materials will be released in stages.",
     "tag": "behind-scenes"
   }
 ]

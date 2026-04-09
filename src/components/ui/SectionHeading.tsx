@@ -1,13 +1,18 @@
 import { motion } from 'framer-motion'
+import { useI18n } from '../../i18n'
 
 interface SectionHeadingProps {
   title: string
   subtitle?: string
   titleEn?: string
+  titleZh?: string
   className?: string
 }
 
-export default function SectionHeading({ title, subtitle, titleEn, className = '' }: SectionHeadingProps) {
+export default function SectionHeading({ title, subtitle, titleEn, titleZh, className = '' }: SectionHeadingProps) {
+  const { locale } = useI18n()
+  const eyebrow = locale === 'zh' ? titleEn : titleZh
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -16,12 +21,12 @@ export default function SectionHeading({ title, subtitle, titleEn, className = '
       transition={{ duration: 0.6 }}
       className={`text-center mb-12 ${className}`}
     >
-      {titleEn && (
+      {eyebrow && (
         <span className="text-xs tracking-[0.3em] uppercase text-text-muted block mb-2">
-          {titleEn}
+          {eyebrow}
         </span>
       )}
-      <h2 className="font-serif text-3xl sm:text-4xl font-bold bg-gradient-to-r from-copper-400 to-glow bg-clip-text text-transparent">
+      <h2 className="pb-1 font-serif text-3xl sm:text-4xl font-bold leading-[1.15] bg-gradient-to-r from-copper-400 to-glow bg-clip-text text-transparent">
         {title}
       </h2>
       {subtitle && (

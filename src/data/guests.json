@@ -1,56 +1,62 @@
 [
   {
-    "id": "guest-1",
-    "name": "陈思远",
-    "nameEn": "Chen Siyuan",
-    "title": "资深纪录片导演",
-    "organization": "湖南卫视",
-    "avatar": "",
-    "bio": "从业二十余年，曾执导多部获奖纪录片，作品多次入围国际电影节。长期关注青年影像创作者的成长与发展。"
+    "id": "xiong-zao",
+    "name": "熊早",
+    "nameEn": "Xiong Zao",
+    "title": "导演、编剧",
+    "titleEn": "Director & Screenwriter",
+    "organization": "深圳戏剧家协会",
+    "organizationEn": "Shenzhen Dramatists Association",
+    "avatar": "/熊早.png",
+    "bio": "毕业于上海戏剧学院导演系，现为深圳戏剧家协会理事、中国电视剧导演协会会员。长期从事戏剧与影视创作，主要作品包括话剧《泥巴人》《我爱莫扎特》，以及电视剧《给婚姻放暑假》《长大成人》《大小对对碰》《糊涂小天使》《零号国境线》《热血尖兵》等。近年还参与微短剧《我不是戏精》的编剧与导演工作。",
+    "bioEn": "A graduate of the Directing Department at the Shanghai Theatre Academy, Xiong Zao is a council member of the Shenzhen Dramatists Association and a member of the China Television Directors Association. His work spans theatre, television and short-form storytelling, including stage plays such as Mud Man and I Love Mozart, as well as series including Summer Vacation for Marriage, Growing Up, Perfect Match, Little Angel, Borderline No. 0 and Hot-Blooded Soldier. In recent years, he has also worked as writer-director on the micro-series I'm Not a Drama Queen."
   },
   {
-    "id": "guest-2",
-    "name": "林雨桐",
-    "nameEn": "Lin Yutong",
-    "title": "影视制片人",
-    "organization": "芒果TV",
-    "avatar": "",
-    "bio": "芒果TV青年制片人，主导多部热播网络电影及短剧项目。致力于发掘新生代创作力量，推动青年影视人才培养。"
+    "id": "huang-shenglan",
+    "name": "黄圣岚",
+    "nameEn": "Huang Shenglan",
+    "title": "制片人",
+    "titleEn": "Producer",
+    "organization": "湖南广电潇影集团·当燃影业",
+    "organizationEn": "Hunan Broadcasting Xiaoxiang Film Group · Dangran Pictures",
+    "avatar": "/黄圣岚.png",
+    "bio": "湖南广电潇影集团当燃影业制片人，深耕影视策划与制作领域。参与打造多部优质作品，包括入选国家广电总局“跟着微短剧去旅行”推荐目录、获第四届中国短视频金蜘蛛盛典“年度文旅微短剧”的《桃花漫漫始盛开》，以及《理想照耀中国》之《八妹》《歌唱！祖国》等项目，并持续探索中短剧与 AI 剧集的创新开发。",
+    "bioEn": "Huang Shenglan is a producer at Dangran Pictures under Hunan Broadcasting Xiaoxiang Film Group. She focuses on screen development and production, and has contributed to acclaimed projects including Peach Blossoms in Full Bloom, selected for the national Follow a Short Drama to Travel recommendation list and awarded Annual Cultural Tourism Micro-Drama at the 4th China Golden Spider Short Video Awards. Her credits also include the Ba Mei and Sing, My Motherland segments of Faith Makes Great. She is currently exploring new possibilities in mid-length drama and AI-assisted storytelling."
   },
   {
-    "id": "guest-3",
-    "name": "王子墨",
-    "nameEn": "Wang Zimo",
-    "title": "电影学院教授",
-    "organization": "中南大学",
-    "avatar": "",
-    "bio": "中南大学文学与新闻传播学院教授，研究方向为影视美学与视听语言。著有《镜头的诗学》等多部学术著作。"
+    "id": "duan-yao",
+    "name": "段瑶",
+    "nameEn": "Duan Yao",
+    "title": "导演、编剧",
+    "titleEn": "Director & Screenwriter",
+    "organization": "风芒传媒",
+    "organizationEn": "Fengmang Media",
+    "avatar": "/段瑶.png",
+    "bio": "现任风芒传媒有限公司导演兼编剧，正在深耕多项前沿影视项目，包括腾讯视频网剧《云雀诡手录》的总编剧工作，以及 AI 精品短剧《越山海》的创作。近期代表作还包括抖音联合深圳市卫健委推出的深港融合医疗短剧《白色光芒》、爱奇艺 VR 沉浸剧《丝路奇遇记》等。她也长期担任综艺与纪实项目的文学核心与撰稿工作。",
+    "bioEn": "Duan Yao is a director and screenwriter at Fengmang Media, currently developing a number of forward-looking projects, including chief screenwriting work for the Tencent Video series The Lark Codex and the AI short drama Beyond Mountains and Seas. Her recent projects also include White Light, a Shenzhen-Hong Kong medical micro-drama developed with Douyin and the Shenzhen Health Commission, and the iQIYI VR immersive drama Silk Road Encounters. She has also served as a key writing voice for variety and documentary productions."
   },
   {
-    "id": "guest-4",
-    "name": "苏晚晴",
-    "nameEn": "Su Wanqing",
-    "title": "青年编剧",
-    "organization": "独立创作者",
-    "avatar": "",
-    "bio": "新锐编剧，作品曾获FIRST青年电影展最佳编剧提名。擅长以细腻笔触描绘当代青年生活，关注个体叙事与时代的交汇。"
+    "id": "gao-jie",
+    "name": "高杰",
+    "nameEn": "Gao Jie",
+    "title": "媒体人、策划人",
+    "titleEn": "Media Strategist & Creative Producer",
+    "organization": "湖南卫视·芒果训练营",
+    "organizationEn": "Hunan TV · Mango Training Camp",
+    "avatar": "/高杰.png",
+    "bio": "青年创业者、媒体人，毕业于中国传媒大学，拥有文学学士及电视节目编导、多媒体专业双学位。具备 23 年传媒与品牌行业从业经验，曾在湖南电视台、湖南教育电视台、快乐购、天择传媒、长沙电视台等机构任职，擅长真人秀、选秀、直播类节目的总策划与总编剧工作，同时担任湖南卫视·芒果训练营主讲师。",
+    "bioEn": "Gao Jie is an entrepreneur and media professional with degrees in literature, television directing and multimedia from the Communication University of China. With 23 years of experience across media and branding, he has worked for Hunan TV, Hunan Education TV, Happigo, Tianze Media and Changsha TV. He specializes in reality shows, talent competitions and live content as a chief planner and head writer, and also serves as a lead instructor for the Hunan TV Mango Training Camp."
   },
   {
-    "id": "guest-5",
-    "name": "赵鹤鸣",
-    "nameEn": "Zhao Heming",
-    "title": "摄影指导",
-    "organization": "长沙星辰影业",
-    "avatar": "",
-    "bio": "资深摄影指导，曾参与多部院线电影的拍摄工作。对光影语言有独到见解，倡导'用镜头说话'的创作理念。"
-  },
-  {
-    "id": "guest-6",
-    "name": "方逸尘",
-    "nameEn": "Fang Yichen",
-    "title": "声音设计师",
-    "organization": "北京听象工作室",
-    "avatar": "",
-    "bio": "专业声音设计师，作品涵盖电影、纪录片及新媒体艺术。曾获中国电影金鸡奖最佳录音提名，对声音叙事有深入研究。"
+    "id": "su-yuexuan",
+    "name": "苏玥璇",
+    "nameEn": "Su Yuexuan",
+    "title": "导演、剪辑师",
+    "titleEn": "Director & Editor",
+    "organization": "独立影像创作者",
+    "organizationEn": "Independent Moving-Image Artist",
+    "avatar": "/苏玥璇.png",
+    "bio": "导演、剪辑师，本科毕业于美国德州大学奥斯汀分校 Radio-Television-Film 专业。参与创作的作品覆盖纪录片、电影、电视剧及微短剧等多个领域，曾参与电影《无名》的制作，并与央视、芒果 TV、腾讯视频等平台合作推出纪录片作品，包括《舌尖上的中国》第四季、《武者归来》《古法“湘”对论》等，也长期参与青年影像展相关剪辑与特别项目制作。",
+    "bioEn": "Su Yuexuan is a director and editor who graduated from the University of Texas at Austin with a degree in Radio-Television-Film. Her practice spans documentaries, feature films, television and short-form series. She previously worked on the film Hidden Blade and has collaborated with CCTV, Mango TV and Tencent Video on nonfiction titles including A Bite of China Season 4, Return of the Martial Artist and Ancient Xiang Craft Dialogues. She also contributes to youth film showcases through editing and special-format projects."
   }
 ]

@@ -12,7 +12,7 @@ export default function WaveAnimation({ className = '', variant = 'separator' }:
         {[0, 1, 2].map((i) => (
           <motion.svg
             key={i}
-            className="absolute w-full"
+            className="absolute left-[-12%] w-[124%]"
             style={{ bottom: `${i * 8}%`, opacity: 0.05 + i * 0.02 }}
             viewBox="0 0 1440 120"
             preserveAspectRatio="none"

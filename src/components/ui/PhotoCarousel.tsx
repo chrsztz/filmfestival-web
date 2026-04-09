@@ -1,5 +1,6 @@
-﻿import { useEffect, useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { Image } from 'lucide-react'
+import { useI18n } from '../../i18n'
 
 interface PhotoCarouselProps {
   photos?: { src: string; alt: string }[]
@@ -8,6 +9,7 @@ interface PhotoCarouselProps {
 
 export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const { locale } = useI18n()
 
   const items = useMemo(
     () =>
@@ -15,9 +17,9 @@ export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCar
         ? photos
         : Array.from({ length: placeholderCount }, (_, i) => ({
             src: '',
-            alt: `幕后花絮 ${i + 1}`,
+            alt: locale === 'zh' ? `幕后花絮 ${i + 1}` : `Behind the Scenes ${i + 1}`,
           })),
-    [photos, placeholderCount],
+    [locale, photos, placeholderCount],
   )
 
   useEffect(() => {
@@ -107,12 +109,12 @@ export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCar
     <div className="relative">
       <div
         ref={containerRef}
-        className="photo-carousel-scroll flex gap-4 overflow-x-auto pb-3 cursor-grab active:cursor-grabbing"
+        className="photo-carousel-scroll flex cursor-grab gap-4 overflow-x-auto pb-3 active:cursor-grabbing"
       >
         {items.map((item, index) => (
           <div
             key={`${item.alt}-${index}`}
-            className="flex-none w-72 sm:w-80 aspect-[4/3] rounded-xl overflow-hidden border border-copper-500/20 bg-festival-navy/60"
+            className="h-[420px] w-72 flex-none overflow-hidden rounded-xl border border-copper-500/20 bg-festival-navy/60 sm:h-[480px] sm:w-80"
           >
             {item.src ? (
               <img
@@ -120,11 +122,11 @@ export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCar
                 alt={item.alt}
                 data-photo-image
                 draggable={false}
-                className="w-full h-full object-cover transition-[object-position] duration-300"
+                className="h-full w-full object-contain transition-[object-position] duration-300"
                 style={{ objectPosition: '50% center' }}
               />
             ) : (
-              <div className="w-full h-full flex flex-col items-center justify-center text-text-muted bg-festival-navy/60">
+              <div className="flex h-full w-full flex-col items-center justify-center bg-festival-navy/60 text-text-muted">
                 <Image size={32} className="mb-2 opacity-40" />
                 <span className="text-xs">{item.alt}</span>
               </div>

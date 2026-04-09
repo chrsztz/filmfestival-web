@@ -1,98 +1,94 @@
 import { motion } from 'framer-motion'
-import { User } from 'lucide-react'
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 import WaveAnimation from '../components/effects/WaveAnimation'
 import guestsData from '../data/guests.json'
 import type { Guest } from '../types'
+import { useI18n } from '../i18n'
 
 const guests: Guest[] = guestsData
 
 export default function GuestsPage() {
+  const { locale } = useI18n()
+
   return (
     <div className="pt-20">
-      {/* Hero */}
-      <section className="relative py-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-festival-dark to-festival-deep" />
+      <section className="relative overflow-hidden px-6 py-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-festival-dark via-festival-deep to-festival-dark" />
+        <div className="absolute inset-0 opacity-60">
+          <div className="absolute left-[-8rem] top-10 h-72 w-72 rounded-full bg-copper-500/10 blur-3xl" />
+          <div className="absolute right-[-6rem] bottom-0 h-80 w-80 rounded-full bg-sage-400/10 blur-3xl" />
+        </div>
         <WaveAnimation variant="background" />
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
           <motion.span
-            className="text-xs tracking-[0.4em] uppercase text-text-muted"
+            className="text-xs uppercase tracking-[0.4em] text-text-muted"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.15 }}
           >
-            JUDGES & GUESTS
+            {locale === 'zh' ? 'JUDGES & GUESTS' : '评审与嘉宾'}
           </motion.span>
           <motion.h1
-            className="font-serif text-4xl sm:text-5xl font-bold mt-4 bg-gradient-to-r from-copper-400 via-glow to-copper-400 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
+            className="mt-4 pb-1 bg-gradient-to-r from-copper-400 via-glow to-copper-400 bg-clip-text font-serif text-4xl font-bold leading-[1.15] text-transparent sm:text-5xl"
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            transition={{ delay: 0.25, duration: 0.6 }}
           >
-            评审与嘉宾
+            {locale === 'zh' ? '评审与嘉宾' : 'Judges & Guests'}
           </motion.h1>
           <motion.p
-            className="mt-6 text-text-secondary max-w-2xl mx-auto"
+            className="mx-auto mt-6 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
           >
-            来自影视行业的资深从业者，为参赛作品提供专业评审与指导
+            {locale === 'zh'
+              ? '来自影视行业的资深从业者，为参赛作品提供专业评审与指导'
+              : 'Experienced professionals from the film and media industry offering thoughtful review and guidance'}
           </motion.p>
         </div>
       </section>
 
       <WaveAnimation />
 
-      {/* Guest Cards */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
           <SectionHeading
-            title="评审团"
-            titleEn="JURY PANEL"
-            subtitle="六位来自不同领域的影视专业人士，共同守护青年影像创作的品质与多元"
+            title={locale === 'zh' ? '评审' : 'Meet the Guests'}
+            titleEn="MEET THE GUESTS"
+            titleZh="评审阵容"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-6">
             {guests.map((guest, index) => (
-              <Card key={guest.id} delay={index * 0.1} className="group">
-                <div className="flex flex-col items-center text-center">
-                  {/* Avatar placeholder */}
-                  <div className="relative mb-5">
-                    <div className="w-24 h-24 rounded-full bg-festival-slate border-2 border-copper-500/20 flex items-center justify-center group-hover:border-glow/50 transition-colors duration-500 overflow-hidden">
-                      {guest.avatar ? (
-                        <img
-                          src={guest.avatar}
-                          alt={guest.name}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <User size={36} className="text-text-muted" />
-                      )}
-                    </div>
-                    {/* Glow ring on hover */}
-                    <div className="absolute inset-0 rounded-full border-2 border-glow/0 group-hover:border-glow/30 transition-all duration-500 scale-100 group-hover:scale-110" />
+              <Card
+                key={guest.id}
+                delay={index * 0.08}
+                hover={false}
+                className="overflow-hidden border-copper-500/20 bg-festival-navy/65 p-0"
+              >
+                <div className="grid gap-0 md:grid-cols-[240px_1fr]">
+                  <div className="relative min-h-[280px] overflow-hidden bg-gradient-to-br from-festival-slate to-festival-navy">
+                    <img src={guest.avatar} alt={locale === 'zh' ? guest.name : guest.nameEn || guest.name} className="h-full w-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-festival-deep/60 via-transparent to-transparent" />
                   </div>
 
-                  {/* Info */}
-                  <h3 className="font-serif text-xl font-bold text-text-primary">
-                    {guest.name}
-                  </h3>
-                  {guest.nameEn && (
-                    <p className="text-xs text-text-muted mt-0.5 tracking-wider">
-                      {guest.nameEn}
+                  <div className="flex flex-col justify-center p-6 sm:p-8">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h2 className="font-serif text-3xl font-bold text-text-primary">
+                        {locale === 'zh' ? guest.name : guest.nameEn || guest.name}
+                      </h2>
+                      <span className="text-xs uppercase tracking-[0.3em] text-text-muted">
+                        {locale === 'zh' ? guest.nameEn : guest.name}
+                      </span>
+                    </div>
+
+                    <p className="mt-6 text-sm leading-8 text-text-secondary sm:text-base">
+                      {locale === 'zh' ? guest.bio : guest.bioEn || guest.bio}
                     </p>
-                  )}
-                  <div className="flex items-center gap-2 mt-2 mb-3">
-                    <span className="text-sm text-copper-400">{guest.title}</span>
-                    <span className="text-text-muted">·</span>
-                    <span className="text-sm text-sage-400">{guest.organization}</span>
                   </div>
-                  <p className="text-sm text-text-secondary leading-relaxed">
-                    {guest.bio}
-                  </p>
                 </div>
               </Card>
             ))}

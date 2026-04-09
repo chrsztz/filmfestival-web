@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { useCountdown } from '../../hooks/useCountdown'
 import { Clock, AlertTriangle } from 'lucide-react'
+import { useCountdown } from '../../hooks/useCountdown'
+import { useI18n } from '../../i18n'
 
 interface CountdownTimerProps {
   targetDate: string
@@ -12,18 +13,18 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
       <div className="relative">
-        <div className="bg-festival-navy/80 backdrop-blur-sm border border-copper-500/20 rounded-lg px-3 py-2 min-w-[60px] sm:min-w-[72px]">
+        <div className="min-w-[60px] rounded-lg border border-copper-500/20 bg-festival-navy/80 px-3 py-2 backdrop-blur-sm sm:min-w-[72px]">
           <motion.span
             key={value}
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="block text-2xl sm:text-3xl font-mono font-bold text-copper-400 text-center tabular-nums"
+            className="block text-center font-mono text-2xl font-bold tabular-nums text-copper-400 sm:text-3xl"
           >
             {String(value).padStart(2, '0')}
           </motion.span>
         </div>
       </div>
-      <span className="text-[10px] sm:text-xs text-text-secondary mt-1.5 tracking-wider uppercase">
+      <span className="mt-1.5 text-[10px] uppercase tracking-wider text-text-secondary sm:text-xs">
         {label}
       </span>
     </div>
@@ -31,35 +32,41 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
 }
 
 export default function CountdownTimer({ targetDate, label, urgent }: CountdownTimerProps) {
+  const { locale } = useI18n()
   const { days, hours, minutes, seconds, isExpired } = useCountdown(targetDate)
+
+  const units =
+    locale === 'zh'
+      ? { days: '天', hours: '时', minutes: '分', seconds: '秒', expired: '已截止' }
+      : { days: 'Days', hours: 'Hours', minutes: 'Mins', seconds: 'Secs', expired: 'Closed' }
 
   if (isExpired) {
     return (
       <div className="text-center">
-        <p className="text-text-secondary text-sm">{label}</p>
-        <p className="text-copper-400 font-serif text-lg mt-1">已截止</p>
+        <p className="text-sm text-text-secondary">{label}</p>
+        <p className="mt-1 font-serif text-lg text-copper-400">{units.expired}</p>
       </div>
     )
   }
 
   return (
     <div className="text-center">
-      <div className="flex items-center justify-center gap-2 mb-3">
+      <div className="mb-3 flex items-center justify-center gap-2">
         {urgent && days <= 7 ? (
-          <AlertTriangle size={16} className="text-glow animate-pulse" />
+          <AlertTriangle size={16} className="animate-pulse text-glow" />
         ) : (
           <Clock size={16} className="text-text-secondary" />
         )}
         <span className="text-sm text-text-secondary">{label}</span>
       </div>
       <div className="flex items-center justify-center gap-2 sm:gap-3">
-        <TimeUnit value={days} label="天" />
-        <span className="text-copper-500/50 text-xl font-light mt-[-16px]">:</span>
-        <TimeUnit value={hours} label="时" />
-        <span className="text-copper-500/50 text-xl font-light mt-[-16px]">:</span>
-        <TimeUnit value={minutes} label="分" />
-        <span className="text-copper-500/50 text-xl font-light mt-[-16px]">:</span>
-        <TimeUnit value={seconds} label="秒" />
+        <TimeUnit value={days} label={units.days} />
+        <span className="mt-[-16px] text-xl font-light text-copper-500/50">:</span>
+        <TimeUnit value={hours} label={units.hours} />
+        <span className="mt-[-16px] text-xl font-light text-copper-500/50">:</span>
+        <TimeUnit value={minutes} label={units.minutes} />
+        <span className="mt-[-16px] text-xl font-light text-copper-500/50">:</span>
+        <TimeUnit value={seconds} label={units.seconds} />
       </div>
     </div>
   )

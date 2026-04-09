@@ -182,7 +182,6 @@ export default function AnimatedLogo({ className = '', size = 600 }: AnimatedLog
         viewBox={viewBox}
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
-        draggable={false}
         style={{ userSelect: 'none', WebkitUserSelect: 'none', pointerEvents: 'none' }}
       >
         {/* Glow filter */}
