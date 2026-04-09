@@ -87,6 +87,32 @@ img {
   color: var(--color-text-primary);
 }
 
+/* ── Light mode overrides ── */
+html.light {
+  --color-festival-deep: #f8f4ee;
+  --color-festival-dark: #f0ebe3;
+  --color-festival-navy: #e7e1d8;
+  --color-festival-slate: #ddd6cb;
+
+  --color-text-primary: #1c1814;
+  --color-text-secondary: #5c645e;
+  --color-text-muted: #949a96;
+
+  color-scheme: light;
+}
+
+html.light body {
+  color: var(--color-text-primary);
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: var(--color-festival-deep);
+}
+
+html.light ::selection {
+  color: #1c1814;
+}
+
 /* Wave animation keyframes */
 @keyframes wave-float {
   0%, 100% { transform: translateY(0); }

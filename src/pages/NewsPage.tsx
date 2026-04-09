@@ -16,6 +16,7 @@ const works = [
   { src: '/movies/HeartStrings.png', zh: 'HeartStrings', en: 'HeartStrings' },
   { src: '/movies/为珍存岁迹.png', zh: '为珍存岁迹', en: 'For the Precious Traces of Time' },
   { src: '/movies/公益的崛起時空迴响.png', zh: '公益的崛起時空迴响', en: 'Public Welfare Rising: Echoes Across Time' },
+  { src: '/movies/公益的崛起花絮.png', zh: '公益的崛起花絮', en: 'Public Welfare Rising: Behind the Scenes' },
   { src: '/movies/嘉靖四十五年.png', zh: '嘉靖四十五年', en: 'The 45th Year of Jiajing' },
   { src: '/movies/失语症的独白.jpg', zh: '失语症的独白', en: 'Monologue of Aphasia' },
   { src: '/movies/山那边.png', zh: '山那边', en: 'Beyond the Mountain' },

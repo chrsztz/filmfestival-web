@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
 import { useI18n } from '../../i18n'
+import { useTheme } from '../../theme'
 
 const navLinks = [
   { path: '/', zh: '众响之源', en: 'Home' },
@@ -16,6 +17,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
   const { locale, toggleLocale } = useI18n()
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     setMobileOpen(false)
@@ -75,6 +77,21 @@ export default function Navbar() {
           >
             {locale === 'zh' ? 'EN' : '中'}
           </button>
+
+          {/* Theme toggle */}
+          <button
+            onClick={toggleTheme}
+            className="relative ml-2 flex h-7 w-[52px] items-center rounded-full border border-copper-500/20 bg-festival-navy/60 p-0.5 transition-colors hover:bg-copper-500/10"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            <Sun size={12} className={`ml-1 transition-opacity ${theme === 'light' ? 'text-glow opacity-100' : 'text-text-muted opacity-40'}`} />
+            <Moon size={12} className={`ml-auto mr-1 transition-opacity ${theme === 'dark' ? 'text-copper-400 opacity-100' : 'text-text-muted opacity-40'}`} />
+            <motion.div
+              className="absolute top-0.5 h-[22px] w-[22px] rounded-full bg-copper-500/80 shadow-sm"
+              animate={{ left: theme === 'light' ? 2 : 26 }}
+              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+            />
+          </button>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
@@ -84,6 +101,19 @@ export default function Navbar() {
             aria-label={locale === 'zh' ? 'Switch language' : '切换语言'}
           >
             {locale === 'zh' ? 'EN' : '中'}
+          </button>
+          <button
+            onClick={toggleTheme}
+            className="relative flex h-7 w-[52px] items-center rounded-full border border-copper-500/20 bg-festival-navy/60 p-0.5 transition-colors hover:bg-copper-500/10"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            <Sun size={12} className={`ml-1 transition-opacity ${theme === 'light' ? 'text-glow opacity-100' : 'text-text-muted opacity-40'}`} />
+            <Moon size={12} className={`ml-auto mr-1 transition-opacity ${theme === 'dark' ? 'text-copper-400 opacity-100' : 'text-text-muted opacity-40'}`} />
+            <motion.div
+              className="absolute top-0.5 h-[22px] w-[22px] rounded-full bg-copper-500/80 shadow-sm"
+              animate={{ left: theme === 'light' ? 2 : 26 }}
+              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+            />
           </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}

@@ -114,7 +114,7 @@ export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCar
         {items.map((item, index) => (
           <div
             key={`${item.alt}-${index}`}
-            className="h-[420px] w-72 flex-none overflow-hidden rounded-xl border border-copper-500/20 bg-festival-navy/60 sm:h-[480px] sm:w-80"
+            className="h-[420px] w-72 flex-none overflow-hidden rounded-xl border border-copper-500/20 bg-festival-navy/60 transition-transform duration-300 ease-out hover:scale-[1.03] sm:h-[480px] sm:w-80"
           >
             {item.src ? (
               <img

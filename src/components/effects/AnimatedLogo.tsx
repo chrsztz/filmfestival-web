@@ -193,11 +193,11 @@ export default function AnimatedLogo({ className = '', size = 600 }: AnimatedLog
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
-          <radialGradient id="centerGlow" cx="50%" cy="50%" r="58%">
-            <stop offset="0%" stopColor="#ffc890" stopOpacity="0.66" />
-            <stop offset="46%" stopColor="#e8956a" stopOpacity="0.34" />
-            <stop offset="78%" stopColor="#9f544a" stopOpacity="0.14" />
-            <stop offset="100%" stopColor="#9f544a" stopOpacity="0" />
+          <radialGradient id="centerGlow" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stopColor="#f5d4a8" stopOpacity="0.28" />
+            <stop offset="30%" stopColor="#e8a868" stopOpacity="0.15" />
+            <stop offset="60%" stopColor="#c8845a" stopOpacity="0.06" />
+            <stop offset="100%" stopColor="#a06040" stopOpacity="0" />
           </radialGradient>
           <linearGradient id="heartCoreToneA" x1="250" y1="200" x2="550" y2="200" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stopColor="#c97864" />
@@ -275,44 +275,49 @@ export default function AnimatedLogo({ className = '', size = 600 }: AnimatedLog
           </g>
         ))}
 
-        {/* Center warm glow */}
+        {/* Center warm glow — soft ambient light */}
         <motion.circle
           cx="400"
           cy="200"
-          r="66"
+          r="80"
           fill="url(#centerGlow)"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1.03 }}
-          transition={{ duration: 1.5, delay: 1.5, ease: 'easeOut' }}
-        />
-        <motion.circle
-          cx="400"
-          cy="200"
-          r="32"
-          fill="#ffd6a4"
-          opacity="0.16"
           initial={{ opacity: 0, scale: 0.6 }}
-          animate={{ opacity: 0.16, scale: 1.02 }}
-          transition={{ duration: 1.2, delay: 1.65, ease: 'easeOut' }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 2, delay: 1.5, ease: 'easeOut' }}
         />
 
-        {/* Center "12" */}
-        <motion.g
-          fill="none"
-          stroke="#4a3229"
-          strokeWidth="15"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          initial={{ opacity: 0, scale: 0.8 }}
+        {/* Center "12" — refined text with gradient fill and warm glow */}
+        <defs>
+          <linearGradient id="twelveGradient" x1="370" y1="175" x2="430" y2="230" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#f0c896" />
+            <stop offset="40%" stopColor="#e8a050" />
+            <stop offset="100%" stopColor="#c67a4a" />
+          </linearGradient>
+          <filter id="twelveGlow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
+        <motion.text
+          x="400"
+          y="208"
+          textAnchor="middle"
+          dominantBaseline="middle"
+          fontFamily="'Noto Serif SC', 'Georgia', serif"
+          fontSize="52"
+          fontWeight="600"
+          letterSpacing="2"
+          fill="url(#twelveGradient)"
+          filter="url(#twelveGlow)"
+          initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 2, ease: 'easeOut' }}
-          style={{ transformOrigin: '400px 200px' }}
+          transition={{ duration: 1, delay: 2, ease: 'easeOut' as const }}
+          style={{ transformOrigin: '400px 204px' }}
           pointerEvents="none"
           aria-hidden="true"
         >
-          <path d="M362,178 L374,169 L374,236" />
-          <path d="M386,181 Q399,167 417,170 Q433,173 437,188 Q441,203 424,217 L394,236 L438,236" />
-        </motion.g>
+          12
+        </motion.text>
       </svg>
     </div>
   )
