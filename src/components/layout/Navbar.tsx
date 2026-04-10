@@ -10,6 +10,7 @@ const navLinks = [
   { path: '/concept', zh: '主题释义', en: 'Concept' },
   { path: '/guests', zh: '评审嘉宾', en: 'Guests' },
   { path: '/submissions', zh: '投递通道', en: 'Submit' },
+  { path: '/cinema', zh: '云端影院', en: 'Cinema' },
   { path: '/news', zh: '影节动态', en: 'News' },
 ]
 

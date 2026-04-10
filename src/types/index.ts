@@ -36,13 +36,17 @@ export interface NewsItem {
 
 export interface Film {
   id: string;
+  order?: number;
   title: string;
   titleEn?: string;
-  division: string;
-  team: string;
-  duration: string;
-  synopsis: string;
+  director: string;
+  directorEn?: string;
+  school?: string;
+  schoolEn?: string;
+  durationSeconds: number;
+  videoUrl: string;
   poster?: string;
-  videoUrl?: string;
+  synopsis?: string;
+  synopsisEn?: string;
   awards?: string[];
 }

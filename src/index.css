@@ -113,6 +113,29 @@ html.light ::selection {
   color: #1c1814;
 }
 
+/* Film player volume slider */
+.film-volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: var(--color-copper-300);
+  border: 1px solid var(--color-copper-500);
+  box-shadow: 0 0 8px rgba(232, 160, 80, 0.45);
+  cursor: pointer;
+}
+
+.film-volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: var(--color-copper-300);
+  border: 1px solid var(--color-copper-500);
+  box-shadow: 0 0 8px rgba(232, 160, 80, 0.45);
+  cursor: pointer;
+}
+
 /* Wave animation keyframes */
 @keyframes wave-float {
   0%, 100% { transform: translateY(0); }

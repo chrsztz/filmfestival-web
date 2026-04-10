@@ -1,0 +1,253 @@
+[
+  {
+    "id": "01-soccer-youth-story",
+    "order": 1,
+    "title": "绿茵少年",
+    "titleEn": "Soccer Youth Story",
+    "director": "魏欣然团队",
+    "directorEn": "Wei Xinran Team",
+    "durationSeconds": 552,
+    "videoUrl": "https://media.bgyservice.cn/30d5b525348e71f180614531958d0102/0c403b857e314936a6147874f4116fa2-9f07d55a2f3a45b00f7345526cf3e761-hd-mp4.mp4",
+    "poster": "/movies/绿茵少年.png"
+  },
+  {
+    "id": "02-unexpected-surprise",
+    "order": 2,
+    "title": "错位的惊喜",
+    "titleEn": "Unexpected Surprise",
+    "director": "马逍然",
+    "directorEn": "Ma Xiaoran",
+    "durationSeconds": 585,
+    "videoUrl": "https://media.bgyservice.cn/b00db725348e71f180395017f1e80102/482f0f1228dc4323a7c221e45582df58-099d60476ebf66b17923223cf4ec1665-hd-mp4.mp4",
+    "poster": "/movies/错位的惊喜.png"
+  },
+  {
+    "id": "03-ma-yujun",
+    "order": 3,
+    "title": "马裕峻",
+    "titleEn": "Ma Yujun",
+    "director": "马裕峻",
+    "directorEn": "Ma Yujun",
+    "school": "伦教中学",
+    "schoolEn": "Lunjiao Middle School",
+    "durationSeconds": 352,
+    "videoUrl": "https://media.bgyservice.cn/602cbb25348e71f187215017f0e90102/5ac53e3492154db3829ef6ec3a8b00cb-ea65f566ab9d0f6bb527816cc87e127d-hd-mp4.mp4"
+  },
+  {
+    "id": "04-heartstrings",
+    "order": 4,
+    "title": "心语",
+    "titleEn": "Heartstrings",
+    "director": "钟莱",
+    "directorEn": "Zhong Lai",
+    "durationSeconds": 302,
+    "videoUrl": "https://media.bgyservice.cn/1087b525348e71f1bfea6723a78f0102/a07a7189db4442d59b412b6c52e6654e-c8f346882d422ebc441f4e1d497d55db-hd-mp4.mp4",
+    "poster": "/movies/HeartStrings.png"
+  },
+  {
+    "id": "05-magic-tree-house",
+    "order": 5,
+    "title": "A Magic Tree House Adventure: Into the Dinosaurs World",
+    "titleEn": "A Magic Tree House Adventure: Into the Dinosaurs World",
+    "director": "郑宇乔",
+    "directorEn": "Zheng Yuqiao",
+    "durationSeconds": 129,
+    "videoUrl": "https://media.bgyservice.cn/20e3c125348e71f1b2125420848d0102/33ac44a5296e41389b617aa55564a74a-cd4cd237953556bc241c28ec57896dad-hd-mp4.mp4",
+    "poster": "/movies/A Magic Tree House Adventure.png"
+  },
+  {
+    "id": "06-self-reliance",
+    "order": 6,
+    "title": "能自强",
+    "titleEn": "Self-Reliance",
+    "director": "邓易洋 / 梁晓君",
+    "directorEn": "Deng Yiyang & Liang Xiaojun",
+    "durationSeconds": 468,
+    "videoUrl": "https://media.bgyservice.cn/507c408d348e71f187215017f0e90102/4c690374afde485db1a1dedbff99415a-798bb536f499570a662a1e70378ab95d-hd-mp4.mp4",
+    "poster": "/movies/熊自强.png"
+  },
+  {
+    "id": "07-beneath-the-blue",
+    "order": 7,
+    "title": "Beneath the Blue",
+    "titleEn": "Beneath the Blue",
+    "director": "赖语白",
+    "directorEn": "Lai Yubai",
+    "durationSeconds": 867,
+    "videoUrl": "https://media.bgyservice.cn/6088f3a4348e71f180395017f1e80102/9abbac341899421db0b7196d6c4ccdae-d3f4db553fcd2534c8648f04ecc23496-hd-mp4.mp4",
+    "poster": "/movies/Beneath The Blue.png"
+  },
+  {
+    "id": "08-mr-hu-chao",
+    "order": 8,
+    "title": "胡超老师",
+    "titleEn": "Mr. Hu Chao",
+    "director": "胡超老师",
+    "directorEn": "Mr. Hu Chao",
+    "durationSeconds": 782,
+    "videoUrl": "https://media.bgyservice.cn/c070e5e6348f71f1935b6733a78e0102/6d982a4e5a694b0b90d6bf3ee20a6e1c-2c7cdec423a3089583ff61e1782fd073-hd-mp4.mp4"
+  },
+  {
+    "id": "09-born-on-a-detour",
+    "order": 9,
+    "title": "生于弯路",
+    "titleEn": "Born on a Detour",
+    "director": "沈颢煊 / 陈梓豪",
+    "directorEn": "Shen Haoxuan & Chen Zihao",
+    "durationSeconds": 659,
+    "videoUrl": "https://media.bgyservice.cn/a093e7e6348f71f180d54531959d0102/128993f468f44d7795361941986862d9-b363c253c33d5b7f67e892b9b2ec110f-hd-mp4.mp4",
+    "poster": "/movies/生于弯路.png"
+  },
+  {
+    "id": "10-over-the-hill",
+    "order": 10,
+    "title": "山那边",
+    "titleEn": "Over the Hill",
+    "director": "林俊安",
+    "directorEn": "Lin Jun'an",
+    "durationSeconds": 1026,
+    "videoUrl": "https://media.bgyservice.cn/e062ab85349171f180186732b68f0102/729f445474504730969e22a043080725-25c3a71c4c297907db1afc9b4dd6dc70-hd-mp4.mp4",
+    "poster": "/movies/山那边.png"
+  },
+  {
+    "id": "11-li-mingzhe",
+    "order": 11,
+    "title": "李明哲",
+    "titleEn": "Li Mingzhe",
+    "director": "李明哲",
+    "directorEn": "Li Mingzhe",
+    "durationSeconds": 595,
+    "videoUrl": "https://media.bgyservice.cn/50e5ae85349171f187215017f0e90102/e53965d6e9064a93aa0043493b2eabbc-8c5fd00f5d5079b4ecb56542605f2317-hd-mp4.mp4"
+  },
+  {
+    "id": "12-dreamscape",
+    "order": 12,
+    "title": "梦境",
+    "titleEn": "Dreamscape",
+    "director": "李嘉颖团队",
+    "directorEn": "Li Jiaying Team",
+    "durationSeconds": 359,
+    "videoUrl": "https://media.bgyservice.cn/40beae85349171f180ce5017e1f80102/99e3b87231774274833fe2380ecce04e-998488f818689ad965506612e764ae4c-hd-mp4.mp4",
+    "poster": "/movies/梦境.png"
+  },
+  {
+    "id": "13-resume-polishers-financial-dream",
+    "order": 13,
+    "title": "简历包装师的金融幻梦",
+    "titleEn": "The Résumé Polisher's Financial Dream",
+    "director": "扬子丞",
+    "directorEn": "Yang Zicheng",
+    "school": "伦教中学",
+    "schoolEn": "Lunjiao Middle School",
+    "durationSeconds": 427,
+    "videoUrl": "https://media.bgyservice.cn/d0ffb485349171f18fde4531858c0102/db4e519c09314c11b13db7e28b3767f4-dbb4a988a5e0d2ac70e1eecdf51b9843-hd-mp4.mp4"
+  },
+  {
+    "id": "14-hoop-duang-unbound",
+    "order": 14,
+    "title": "童篮无界",
+    "titleEn": "Hoop Duang Unbound",
+    "director": "华嘉言",
+    "directorEn": "Hua Jiayan",
+    "durationSeconds": 1097,
+    "videoUrl": "https://media.bgyservice.cn/90bcc0e234ab71f180664531958d0102/b8fad96b591f9656bd24c9528d1c2ed1-hd-mp4.mp4",
+    "poster": "/movies/童篮无界.png"
+  },
+  {
+    "id": "15-across-1300-kilometers",
+    "order": 15,
+    "title": "越过1300公里",
+    "titleEn": "Across 1300 Kilometers",
+    "director": "刘君陶团队",
+    "directorEn": "Liu Juntao Team",
+    "durationSeconds": 313,
+    "videoUrl": "https://media.bgyservice.cn/007f573c349371f1bfe56732b68e0102/47853062e0ef4b75b3a2bc9e9a3b38c3-407ce6c992fd618d4314039b67da3549-hd-mp4.mp4",
+    "poster": "/movies/越过1300公里.png"
+  },
+  {
+    "id": "16-monologue-of-aphasia",
+    "order": 16,
+    "title": "失语症的独白",
+    "titleEn": "Monologue of Aphasia",
+    "director": "伍庭萱团队",
+    "directorEn": "Wu Tingxuan Team",
+    "durationSeconds": 313,
+    "videoUrl": "https://media.bgyservice.cn/20cd573c349371f180864531958c0102/e4d94bb1565a4b4bb23ec1f6fcdf2718-c4306c7ab084433ebb9685a900a509df-hd-mp4.mp4",
+    "poster": "/movies/失语症的独白.jpg"
+  },
+  {
+    "id": "17-ren-yihan",
+    "order": 17,
+    "title": "任怡涵",
+    "titleEn": "Ren Yihan",
+    "director": "任怡涵",
+    "directorEn": "Ren Yihan",
+    "durationSeconds": 601,
+    "videoUrl": "https://media.bgyservice.cn/f0e6543c349371f187225017f0e90102/f760a273bd4c444bac136b54ed489a16-34ed8e43912ea7cb71fc56d1def2dade-hd-mp4.mp4"
+  },
+  {
+    "id": "18-from-rituals-to-spectacles",
+    "order": 18,
+    "title": "傩",
+    "titleEn": "From Rituals to Spectacles",
+    "director": "廖启舜",
+    "directorEn": "Liao Qishun",
+    "durationSeconds": 330,
+    "videoUrl": "https://media.bgyservice.cn/20abdffb349f71f1bfef6732b68e0102/9bc6b1587e664a019c5f19b118ea864d-e0281f9e058b3d02a55af6f293c4de81-hd-mp4.mp4"
+  },
+  {
+    "id": "19-public-welfare-ii-bts",
+    "order": 19,
+    "title": "公益的崛起 II · 时空迥响（花絮篇）",
+    "titleEn": "Public Welfare Rising II: Echoes Across Time (Behind the Scenes)",
+    "director": "叶启贤团队",
+    "directorEn": "Ye Qixian Team",
+    "durationSeconds": 424,
+    "videoUrl": "https://media.bgyservice.cn/a054e3fb349f71f193606733a78e0102/038acfdb2aa64d2595cf77352e4d3b8f-6d7c19284460008a0bc9cce85a0d14e9-hd-mp4.mp4",
+    "poster": "/movies/公益的崛起花絮.png"
+  },
+  {
+    "id": "20-our-unspoken-stories",
+    "order": 20,
+    "title": "我们的故事",
+    "titleEn": "Our Unspoken Stories",
+    "director": "罗子茗",
+    "directorEn": "Luo Ziming",
+    "durationSeconds": 1313,
+    "videoUrl": "https://media.bgyservice.cn/600beafb349f71f1809f5017f0e80102/fd5fde8707ed46f59148461081de5079-bc32ee61e177fed6eada02a15d6c661c-hd-mp4.mp4",
+    "poster": "/movies/我们的故事.png"
+  },
+  {
+    "id": "21-preserving-times-traces",
+    "order": 21,
+    "title": "为珍存岁迹",
+    "titleEn": "For the Precious Traces of Time",
+    "director": "朱悦文",
+    "directorEn": "Zhu Yuewen",
+    "durationSeconds": 949,
+    "videoUrl": "https://media.bgyservice.cn/909d4ed034a471f199185017f1e90102/b766e4fd4f1d443a9c3477c5e23d51bb-a6be992701b6591888a18a8eca6c733e-hd-mp4.mp4",
+    "poster": "/movies/为珍存岁迹.png"
+  },
+  {
+    "id": "22-public-welfare-ii-feature",
+    "order": 22,
+    "title": "公益的崛起 II · 时空迥响（正片）",
+    "titleEn": "Public Welfare Rising II: Echoes Across Time",
+    "director": "叶启贤团队",
+    "directorEn": "Ye Qixian Team",
+    "durationSeconds": 588,
+    "videoUrl": "https://media.bgyservice.cn/70249ef134a471f1808c5017f0f90102/a7724dbde5d24b9b90a3b31180c7b08f-2cd6426983c7a5099f64d0e2bbf81032-hd-mp4.mp4",
+    "poster": "/movies/公益的崛起時空迴响.png"
+  },
+  {
+    "id": "23-the-45th-year-of-jiajing",
+    "order": 23,
+    "title": "嘉靖四十五年",
+    "titleEn": "The 45th Year of Jiajing",
+    "director": "刘博瀚",
+    "directorEn": "Liu Bohan",
+    "durationSeconds": 917,
+    "videoUrl": "https://media.bgyservice.cn/c027340834a571f1a3465017f0f80102/866b43fb3c5046f4b6b4ec64f32923a8-36133040a7d1615d1661419ba0336a62-hd-mp4.mp4",
+    "poster": "/movies/嘉靖四十五年.png"
+  }
+]
