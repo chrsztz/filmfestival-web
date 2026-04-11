@@ -62,9 +62,12 @@ export default function Navbar() {
                 {locale === 'zh' ? link.zh : link.en}
                 {isActive && (
                   <motion.div
-                    layoutId="navbar-indicator"
                     className="absolute bottom-0 left-2 right-2 h-0.5 rounded-full bg-gradient-to-r from-copper-400 to-glow"
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    initial={{ opacity: 0, scaleX: 0.85 }}
+                    animate={{ opacity: 1, scaleX: 1 }}
+                    exit={{ opacity: 0, scaleX: 0.85 }}
+                    transition={{ duration: 0.18, ease: 'easeOut' }}
+                    style={{ transformOrigin: 'center' }}
                   />
                 )}
               </Link>

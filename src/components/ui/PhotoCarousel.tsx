@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef } from 'react'
-import { Image } from 'lucide-react'
 import { useI18n } from '../../i18n'
 
 interface PhotoCarouselProps {
@@ -29,10 +28,26 @@ export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCar
     const updateVisuals = () => {
       const maxScroll = Math.max(container.scrollWidth - container.clientWidth, 1)
       const progress = container.scrollLeft / maxScroll
-      const objectPositionX = 100 - progress * 100
+      const imageOffset = -18 + progress * 36
 
       container.querySelectorAll<HTMLImageElement>('[data-photo-image]').forEach((img) => {
-        img.style.objectPosition = `${objectPositionX}% center`
+        img.style.transform = `translateX(${imageOffset}%) scale(1.08)`
+      })
+
+      const containerRect = container.getBoundingClientRect()
+      const containerCenter = containerRect.left + containerRect.width / 2
+
+      container.querySelectorAll<HTMLDivElement>('[data-photo-card]').forEach((card) => {
+        const cardRect = card.getBoundingClientRect()
+        const cardCenter = cardRect.left + cardRect.width / 2
+        const distanceRatio = Math.min(Math.abs(containerCenter - cardCenter) / containerRect.width, 1)
+        const focus = 1 - distanceRatio
+        const scale = 0.88 + focus * 0.12
+        const opacity = 0.42 + focus * 0.58
+        const y = (1 - focus) * 24
+
+        card.style.transform = `translateY(${y}px) scale(${scale})`
+        card.style.opacity = String(opacity)
       })
     }
 
@@ -109,26 +124,33 @@ export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCar
     <div className="relative">
       <div
         ref={containerRef}
-        className="photo-carousel-scroll flex cursor-grab gap-4 overflow-x-auto pb-3 active:cursor-grabbing"
+        className="photo-carousel-scroll flex cursor-grab gap-4 overflow-x-auto px-[18vw] pb-3 active:cursor-grabbing"
       >
         {items.map((item, index) => (
           <div
             key={`${item.alt}-${index}`}
-            className="h-[420px] w-72 flex-none overflow-hidden rounded-xl border border-copper-500/20 bg-festival-navy/60 transition-transform duration-300 ease-out hover:scale-[1.03] sm:h-[480px] sm:w-80"
+            data-photo-card
+            className="h-[420px] w-72 flex-none overflow-hidden rounded-xl border border-copper-500/20 bg-festival-navy/60 transition-[transform,opacity,border-color,box-shadow] duration-300 ease-out will-change-transform sm:h-[480px] sm:w-80"
           >
             {item.src ? (
-              <img
-                src={item.src}
-                alt={item.alt}
-                data-photo-image
-                draggable={false}
-                className="h-full w-full object-contain transition-[object-position] duration-300"
-                style={{ objectPosition: '50% center' }}
-              />
+              <div className="h-full w-full overflow-hidden">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  data-photo-image
+                  draggable={false}
+                  className="h-full w-full object-cover will-change-transform"
+                  style={{ transform: 'translateX(0%) scale(1.08)', transformOrigin: 'center center' }}
+                />
+              </div>
             ) : (
-              <div className="flex h-full w-full flex-col items-center justify-center bg-festival-navy/60 text-text-muted">
-                <Image size={32} className="mb-2 opacity-40" />
-                <span className="text-xs">{item.alt}</span>
+              <div
+                className="flex h-full w-full items-center justify-center bg-festival-navy/60 px-6 text-center"
+                aria-label={item.alt}
+              >
+                <span className="font-serif text-lg tracking-[0.16em] text-copper-300/80 sm:text-xl">
+                  {locale === 'zh' ? '敬请期待' : 'Coming Soon'}
+                </span>
               </div>
             )}
           </div>

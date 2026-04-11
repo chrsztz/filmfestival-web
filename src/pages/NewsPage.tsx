@@ -105,18 +105,18 @@ export default function NewsPage() {
       <section className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            title={locale === 'zh' ? '作品' : 'Works'}
-            titleEn="WORKS"
-            titleZh="作品"
+            title={locale === 'zh' ? '幕后照片' : 'Behind the Scenes Photos'}
+            titleEn="BEHIND THE SCENES PHOTOS"
+            titleZh="幕后照片"
             subtitle={
               locale === 'zh'
-                ? '本届作品封面预览'
-                : 'A preview of selected works and their cover art'
+                ? '记录创作现场与影节时刻'
+                : 'Moments from production and the festival'
             }
           />
           <PhotoCarousel
-            photos={works.map((work) => ({
-              src: work.src,
+            photos={works.map((work, index) => ({
+              src: index === Math.floor(works.length / 2) ? '/behind/coding.png' : '',
               alt: locale === 'zh' ? work.zh : work.en,
             }))}
           />

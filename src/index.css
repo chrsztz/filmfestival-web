@@ -68,17 +68,20 @@ img {
 }
 
 .photo-carousel-scroll::-webkit-scrollbar {
-  height: 8px;
+  height: 0;
 }
 
 .photo-carousel-scroll::-webkit-scrollbar-track {
-  background: color-mix(in srgb, var(--color-festival-navy) 80%, transparent);
-  border-radius: 999px;
+  background: transparent;
 }
 
 .photo-carousel-scroll::-webkit-scrollbar-thumb {
-  background: var(--color-copper-500);
-  border-radius: 999px;
+  background: transparent;
+}
+
+.photo-carousel-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* Selection color */

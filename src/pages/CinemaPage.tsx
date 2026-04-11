@@ -144,10 +144,6 @@ export default function CinemaPage() {
                       {formatRuntime(film.durationSeconds, locale)}
                     </div>
 
-                    {/* Order number */}
-                    <div className="absolute left-3 top-3 font-serif text-2xl text-copper-300/70 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-                      {String(film.order ?? index + 1).padStart(2, '0')}
-                    </div>
                   </div>
 
                   {/* Meta */}
