@@ -90,7 +90,7 @@ export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCar
       return groupEls[1].getBoundingClientRect().left - groupEls[0].getBoundingClientRect().left
     }
 
-    const updateVisuals = (normalizedOffset: number, period: number) => {
+    const updateVisuals = () => {
       const parallaxShift = Math.sin(virtualOffsetRef.current / 240) * 18
 
       track.querySelectorAll<HTMLImageElement>('[data-photo-image]').forEach((img) => {
@@ -120,7 +120,7 @@ export default function PhotoCarousel({ photos, placeholderCount = 6 }: PhotoCar
 
       const normalizedOffset = mod(virtualOffsetRef.current, period)
       track.style.transform = `translate3d(${-period - normalizedOffset}px, 0, 0)`
-      updateVisuals(normalizedOffset, period)
+      updateVisuals()
     }
 
     const scheduleApplyTrackPosition = () => {
