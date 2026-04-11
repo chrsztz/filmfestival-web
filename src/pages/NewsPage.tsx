@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
@@ -10,28 +11,57 @@ import { useI18n } from '../i18n'
 
 const news: NewsItem[] = newsData as NewsItem[]
 
-const works = [
-  { src: '/movies/A Magic Tree House Adventure.png', zh: 'A Magic Tree House Adventure', en: 'A Magic Tree House Adventure' },
-  { src: '/movies/Beneath The Blue.png', zh: 'Beneath The Blue', en: 'Beneath The Blue' },
-  { src: '/movies/HeartStrings.png', zh: 'HeartStrings', en: 'HeartStrings' },
-  { src: '/movies/为珍存岁迹.png', zh: '为珍存岁迹', en: 'For the Precious Traces of Time' },
-  { src: '/movies/公益的崛起時空迴响.png', zh: '公益的崛起時空迴响', en: 'Public Welfare Rising: Echoes Across Time' },
-  { src: '/movies/公益的崛起花絮.png', zh: '公益的崛起花絮', en: 'Public Welfare Rising: Behind the Scenes' },
-  { src: '/movies/嘉靖四十五年.png', zh: '嘉靖四十五年', en: 'The 45th Year of Jiajing' },
-  { src: '/movies/失语症的独白.jpg', zh: '失语症的独白', en: 'Monologue of Aphasia' },
-  { src: '/movies/山那边.png', zh: '山那边', en: 'Beyond the Mountain' },
-  { src: '/movies/我们的故事.png', zh: '我们的故事', en: 'Our Story' },
-  { src: '/movies/梦境.png', zh: '梦境', en: 'Dreamscape' },
-  { src: '/movies/熊自强.png', zh: '熊自强', en: 'Xiong Ziqiang' },
-  { src: '/movies/生于弯路.png', zh: '生于弯路', en: 'Born on a Winding Road' },
-  { src: '/movies/童篮无界.png', zh: '童篮无界', en: 'Beyond the Basket' },
-  { src: '/movies/绿茵少年.png', zh: '绿茵少年', en: 'Boys on the Green' },
-  { src: '/movies/越过1300公里.png', zh: '越过1300公里', en: 'Across 1300 Kilometers' },
-  { src: '/movies/错位的惊喜.png', zh: '错位的惊喜', en: 'Misplaced Surprise' },
-]
+const shuffle = <T,>(items: T[]) => {
+  const next = [...items]
+  for (let i = next.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[next[i], next[j]] = [next[j], next[i]]
+  }
+  return next
+}
 
 export default function NewsPage() {
   const { locale } = useI18n()
+
+  const behindPhotos = useMemo(() => {
+    const across1300 = shuffle([
+      '/behind/越过1300公里/1.jpg',
+      '/behind/越过1300公里/2.jpg',
+      '/behind/越过1300公里/3.jpg',
+      '/behind/越过1300公里/4.jpg',
+      '/behind/越过1300公里/5.jpg',
+    ])
+      .slice(0, 3)
+      .map((src, index) => ({
+        src,
+        alt: locale === 'zh' ? `越过1300公里 幕后照片 ${index + 1}` : `Across 1300 Kilometers behind-the-scenes photo ${index + 1}`,
+        description: locale === 'zh' ? '越过1300公里' : 'Across 1300 Kilometers',
+      }))
+
+    return [
+      ...across1300,
+      {
+        src: '/behind/梦境/1.jpg',
+        alt: locale === 'zh' ? '梦境 幕后照片' : 'Dreamscape behind-the-scenes photo',
+        description: locale === 'zh' ? '梦境' : 'Dreamscape',
+      },
+      {
+        src: '/behind/coding.png',
+        alt: locale === 'zh' ? '编码 幕后照片' : 'Coding behind-the-scenes photo',
+        description: locale === 'zh' ? '编码' : 'Coding',
+      },
+      {
+        src: '',
+        alt: locale === 'zh' ? '敬请期待 1' : 'Coming Soon 1',
+        description: '',
+      },
+      {
+        src: '',
+        alt: locale === 'zh' ? '敬请期待 2' : 'Coming Soon 2',
+        description: '',
+      },
+    ]
+  }, [locale])
 
   const tagLabels: Record<string, { label: string; color: string }> = {
     announcement: {
@@ -61,7 +91,7 @@ export default function NewsPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            {locale === 'zh' ? 'NEWS & UPDATES' : '影节动态'}
+            {locale === 'zh' ? '影节动态' : 'NEWS & UPDATES'}
           </motion.span>
           <motion.h1
             className="mt-4 bg-gradient-to-r from-copper-400 via-glow to-copper-400 bg-clip-text font-serif text-4xl font-bold text-transparent sm:text-5xl"
@@ -114,22 +144,13 @@ export default function NewsPage() {
                 : 'Moments from production and the festival'
             }
           />
-          <PhotoCarousel
-            photos={works.map((work, index) => ({
-              src: index === Math.floor(works.length / 2) ? '/behind/coding.png' : '',
-              alt: locale === 'zh' ? work.zh : work.en,
-            }))}
-          />
+          <PhotoCarousel photos={behindPhotos} />
         </div>
       </section>
 
       <section className="px-6 py-16">
         <div className="mx-auto max-w-3xl">
-          <SectionHeading
-            title={locale === 'zh' ? '时间轴' : 'Timeline'}
-            titleEn="TIMELINE"
-            titleZh="时间轴"
-          />
+          <SectionHeading title={locale === 'zh' ? '时间轴' : 'Timeline'} titleEn="TIMELINE" titleZh="时间轴" />
 
           <div className="relative">
             <div className="absolute bottom-0 top-0 left-4 w-px bg-gradient-to-b from-copper-500/40 via-copper-500/20 to-transparent sm:left-6" />

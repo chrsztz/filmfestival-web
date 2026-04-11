@@ -10,6 +10,7 @@ export default function Footer() {
           brand: '合心众响',
           edition: '第十二届校园电影节',
           theme: '寻找影像中的时代共振',
+          sponsor: '赞助商：Ztz',
           infoTitle: '影节信息',
           deadline: '投稿截止：2026年3月25日',
           ceremony: '颁奖典礼：2026年4月15日',
@@ -22,6 +23,7 @@ export default function Footer() {
           brand: 'RESONANCE',
           edition: 'The 12th Campus Film Festival',
           theme: 'Finding the resonance of our era through moving images',
+          sponsor: 'Sponsor: Ztz',
           infoTitle: 'Festival Info',
           deadline: 'Submission Deadline: March 25, 2026',
           ceremony: 'Award Ceremony: April 15, 2026',
@@ -46,6 +48,7 @@ export default function Footer() {
               <br />
               {copy.theme}
             </p>
+            <p className="mt-2 text-sm text-text-secondary">{copy.sponsor}</p>
           </div>
 
           <div className="md:justify-self-end md:text-right">
